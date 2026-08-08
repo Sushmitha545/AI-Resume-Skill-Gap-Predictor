@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - AI Resume Skill Gap Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <div class="logo">🤖</div>
+
+    <h1>Welcome!</h1>
+
+    <h2>AI Resume Skill Gap Predictor</h2>
+
+    <p>Upload your resume and discover your skill gaps.</p>
+
+    <br>
+<form action="/analyze" method="POST" enctype="multipart/form-data">
+
+    <input type="file" name="resume" required>
+
+    <br><br>
+
+    <select name="job_role">
+
+        <option>Select Job Role</option>
+        <option>Software Engineer</option>
+        <option>Data Analyst</option>
+        <option>Python Developer</option>
+        <option>Web Developer</option>
+        <option>AI/ML Engineer</option>
+
+    </select>
+
+    <br><br>
+
+    <button type="submit">Analyze Resume</button>
+
+</form>
+    
+        <option>Select Job Role</option>
+        <option>Software Engineer</option>
+        <option>Data Analyst</option>
+        <option>Python Developer</option>
+        <option>Web Developer</option>
+        <option>AI/ML Engineer</option>
+    </select>
+
+    <br><br>
+
+    <button>Analyze Resume</button>
+
+</div>
+
+</body>
+</html>

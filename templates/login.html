@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Skill Gap Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <div class="logo">
+        🤖
+    </div>
+
+    <h1>AI Resume Skill Gap Predictor</h1>
+
+    <p>Find your skill gaps. Build your future.</p>
+
+    <form method="POST">
+
+<input type="email" name="email" placeholder="Enter Email" required>
+
+<input type="password" name="password" placeholder="Enter Password" required>
+<br><br>
+
+<input type="checkbox" onclick="showPassword()">
+<label>Show Password</label>
+<button type="submit">Login</button>
+<br><br>
+<a href="/forgot_password">Forgot Password?</a>
+
+
+</form>
+
+    <p class="signup">
+        New user? Create an account
+    </p>
+
+</div>
+
+</body>
+</html>
+
+<script>
+function showPassword() {
+    var x = document.getElementsByName("password")[0];
+
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>

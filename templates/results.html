@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Skill Gap Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AI Resume Skill Gap Predictor</h1>
+
+    <h2>Selected Job Role</h2>
+    <p>{{ job_role }}</p>
+
+    <h2>Detected Skills</h2>
+    <h1>AI Resume Skill Gap Predictor</h1>
+
+<div class="result-card">
+    <h2>Selected Job Role</h2>
+    <p>{{ job_role }}</p>
+</div>
+
+<div class="result-card">
+    <h2>Detected Skills</h2>
+    <p class="green">
+        {{ found_skills | join(', ') }}
+    </p>
+</div>
+
+<div class="result-card">
+    <h2>Missing Skills</h2>
+    <p class="red">
+        {{ missing_skills | join(', ') }}
+    </p>
+</div>
+
+<div class="result-card">
+    <h2>Match Percentage</h2>
+
+    <div class="progress">
+        <div class="progress-bar"
+             style="width: {{ match_percentage }}%;">
+        </div>
+    </div>
+
+    <p class="blue">{{ match_percentage }}%</p>
+</div>
+<div class="result-card">
+    <h2>Recommended Skills to Learn</h2>
+
+    {% if recommendations %}
+        <p class="red">
+            {{ recommendations | join(', ') }}
+        </p>
+    {% else %}
+        <p class="green">
+            Congratulations! Your resume matches all the required skills.
+        </p>
+    {% endif %}
+</div>
+
+</body>
+</html>
