@@ -4,7 +4,10 @@ import os
 import PyPDF2
 
 app = Flask(__name__)
+
 app.config["UPLOAD_FOLDER"]="uploads"
+os.makedirs(app.config["UPLOAD_FOLDER"],
+            exist_ok=True)
 
 def extract_text_from_pdf(pdf_path):
 
