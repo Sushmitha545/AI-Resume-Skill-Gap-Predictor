@@ -44,33 +44,236 @@ skills_list = [
 ]
 
 job_skills = {
+
+    # 💻 SOFTWARE & DEVELOPMENT
     "Software Engineer": [
         "Python", "Java", "SQL", "Git", "HTML", "CSS", "JavaScript"
     ],
 
     "Python Developer": [
-        "Python", "Flask", "SQL", "Git", "HTML", "CSS"
+        "Python", "Flask", "Django", "SQL", "Git", "HTML", "CSS"
+    ],
+
+    "Java Developer": [
+        "Java", "SQL", "Git", "Spring", "HTML", "CSS", "JavaScript"
+    ],
+
+    "C/C++ Developer": [
+        "C", "C++", "Git", "Data Structures", "Algorithms"
+    ],
+
+    "Full Stack Developer": [
+        "HTML", "CSS", "JavaScript", "Python", "Flask",
+        "SQL", "Git", "React"
+    ],
+
+    "Frontend Developer": [
+        "HTML", "CSS", "JavaScript", "React", "Git"
+    ],
+
+    "Backend Developer": [
+        "Python", "Flask", "Django", "Java", "SQL", "Git", "REST API"
     ],
 
     "Web Developer": [
         "HTML", "CSS", "JavaScript", "SQL", "Git"
     ],
 
-    "Data Analyst": [
-        "Python", "SQL", "Pandas", "NumPy", "Data Analysis"
+    "Mobile App Developer": [
+        "Java", "Kotlin", "Android", "Git", "SQL"
+    ],
+
+    "DevOps Engineer": [
+        "Linux", "Git", "Docker", "CI/CD", "Python",
+        "AWS", "Kubernetes"
+    ],
+
+    "Software Tester / QA": [
+        "Testing", "Python", "Java", "SQL", "Selenium", "Git"
+    ],
+
+
+    # 🤖 AI & DATA
+    "AI Engineer": [
+        "Python", "Machine Learning", "Deep Learning",
+        "TensorFlow", "Pandas", "NumPy", "AI"
     ],
 
     "AI/ML Engineer": [
-        "Python",
-        "Machine Learning",
-        "Deep Learning",
-        "TensorFlow",
-        "Pandas",
-        "NumPy",
-        "SQL",
-        "Git"
+        "Python", "Machine Learning", "Deep Learning",
+        "TensorFlow", "Pandas", "NumPy", "AI"
+    ],
+
+    "Machine Learning Engineer": [
+        "Python", "Machine Learning", "Deep Learning",
+        "TensorFlow", "Pandas", "NumPy", "Git"
+    ],
+
+    "Data Scientist": [
+        "Python", "Machine Learning", "Pandas",
+        "NumPy", "SQL", "Data Analysis", "Statistics"
+    ],
+
+    "Data Analyst": [
+        "Python", "SQL", "Pandas", "NumPy",
+        "Data Analysis", "Excel", "Statistics"
+    ],
+
+    "Data Engineer": [
+        "Python", "SQL", "Data Engineering",
+        "Pandas", "Git", "AWS"
+    ],
+
+    "NLP Engineer": [
+        "Python", "NLP", "Machine Learning",
+        "Deep Learning", "TensorFlow"
+    ],
+
+    "Computer Vision Engineer": [
+        "Python", "Computer Vision",
+        "Machine Learning", "Deep Learning",
+        "TensorFlow", "OpenCV"
+    ],
+
+
+    # 🔐 CYBERSECURITY
+    "Cybersecurity Analyst": [
+        "Cybersecurity", "Networking", "Linux",
+        "Python", "Cryptography", "SQL"
+    ],
+
+    "Security Engineer": [
+        "Cybersecurity", "Networking", "Linux",
+        "Python", "Cryptography"
+    ],
+
+    "Ethical Hacker": [
+        "Cybersecurity", "Linux", "Networking",
+        "Python", "Ethical Hacking", "Cryptography"
+    ],
+
+    "SOC Analyst": [
+        "Cybersecurity", "Networking", "Linux",
+        "SIEM", "Threat Analysis"
+    ],
+
+    "Information Security Analyst": [
+        "Cybersecurity", "Networking", "Linux",
+        "Risk Management", "Cryptography"
+    ],
+
+
+    # ☁️ CLOUD & INFRASTRUCTURE
+    "Cloud Engineer": [
+        "AWS", "Azure", "Linux", "Python",
+        "Docker", "Networking", "Git"
+    ],
+
+    "Cloud Architect": [
+        "AWS", "Azure", "Cloud Computing",
+        "Networking", "Linux", "Docker"
+    ],
+
+    "AWS Engineer": [
+        "AWS", "Linux", "Python", "Docker",
+        "Networking", "Git"
+    ],
+
+    "System Administrator": [
+        "Linux", "Windows", "Networking",
+        "Python", "Security"
+    ],
+
+    "Network Engineer": [
+        "Networking", "Linux", "Cybersecurity",
+        "Cloud Computing"
+    ],
+
+
+    # 🎨 DESIGN
+    "UI/UX Designer": [
+        "UI/UX", "Figma", "Wireframing",
+        "Prototyping", "User Research"
+    ],
+
+    "Graphic Designer": [
+        "Graphic Design", "Photoshop",
+        "Illustrator", "Canva", "Typography"
+    ],
+
+    "Product Designer": [
+        "UI/UX", "Figma", "Prototyping",
+        "User Research", "Product Design"
+    ],
+
+
+    # 📊 BUSINESS
+    "Business Analyst": [
+        "Business Analysis", "SQL", "Excel",
+        "Data Analysis", "Communication"
+    ],
+
+    "Project Manager": [
+        "Project Management", "Leadership",
+        "Communication", "Agile", "Risk Management"
+    ],
+
+    "Product Manager": [
+        "Product Management", "Leadership",
+        "Communication", "Agile", "Market Research"
+    ],
+
+    "Digital Marketing Specialist": [
+        "Digital Marketing", "SEO", "Social Media",
+        "Content Marketing", "Google Analytics"
+    ],
+
+    "HR Specialist": [
+        "Human Resources", "Recruitment",
+        "Communication", "Leadership", "Management"
+    ],
+
+
+    # 💰 FINANCE
+    "Financial Analyst": [
+        "Financial Analysis", "Excel",
+        "Accounting", "Statistics", "Data Analysis"
+    ],
+
+    "Accountant": [
+        "Accounting", "Finance", "Excel",
+        "Taxation", "Financial Analysis"
+    ],
+
+    "Banking Associate": [
+        "Finance", "Accounting", "Communication",
+        "Excel", "Customer Service"
+    ],
+
+
+    # 🧪 ENGINEERING
+    "Electronics Engineer": [
+        "Electronics", "C", "C++",
+        "Embedded Systems", "Microcontrollers"
+    ],
+
+    "Mechanical Engineer": [
+        "Mechanical Engineering", "CAD",
+        "AutoCAD", "Design", "Manufacturing"
+    ],
+
+    "Civil Engineer": [
+        "Civil Engineering", "AutoCAD",
+        "Construction", "Structural Design"
+    ],
+
+    "Biomedical Engineer": [
+        "Biomedical Engineering",
+        "Medical Technology", "Research",
+        "Data Analysis"
     ]
 }
+        
 
 def create_database():
     conn = sqlite3.connect("database.db")
