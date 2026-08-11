@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import sqlite3
 import os
 import PyPDF2
+import psycopg2
 
 app = Flask(__name__)
 
@@ -279,12 +280,12 @@ job_skills = {
         
 
 def create_database():
-    conn = sqlite3.connect("database.db")
+    conn = psycopg2.connect(os.environ["DATABASE_URL"])
     cursor = conn.cursor()
 
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS users(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        id SERIAL PRIMARY KEY,
         email TEXT,
         password TEXT
     )
@@ -299,11 +300,11 @@ def home():
         email = request.form["email"]
         password = request.form["password"]
 
-        conn = sqlite3.connect("database.db")
+        conn = psycopg2.connect(os.environ["DATABASE_URL"])
         cursor = conn.cursor()
 
         cursor.execute(
-            "SELECT * FROM users WHERE email=? AND password=?",
+            "SELECT * FROM users WHERE email=%s AND password=%s",
             (email, password)
         )
 
@@ -325,11 +326,11 @@ def signup():
         email = request.form["email"]
         password = request.form["password"]
 
-        conn = sqlite3.connect("database.db")
+        conn = psycopg2.connect(os.environ["DATABASE_URL"])
         cursor = conn.cursor()
 
         cursor.execute(
-            "INSERT INTO users (email, password) VALUES (?, ?)",
+            "INSERT INTO users (email, password) VALUES (%s, %s)",
             (email, password)
         )
 
@@ -345,11 +346,11 @@ def forgot_password():
         email = request.form["email"]
         password = request.form["password"]
 
-        conn = sqlite3.connect("database.db")
+        conn = psycopg2.connect(os.environ["DATABASE_URL"])
         cursor = conn.cursor()
 
         cursor.execute(
-            "UPDATE users SET password=? WHERE email=?",
+            "UPDATE users SET password=%s WHERE email=%s",
             (password, email)
         )
 
